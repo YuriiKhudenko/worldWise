@@ -1,0 +1,52 @@
+{
+  "cities": [
+    {
+      "cityName": "Lisbon",
+      "country": "Portugal",
+      "emoji": "🇵🇹",
+      "date": "2027-10-31T15:59:59.138Z",
+      "notes": "My favorite city so far!",
+      "position": {
+        "lat": 38.727881642324164,
+        "lng": -9.140900099907554
+      },
+      "id": 73930385
+    },
+    {
+      "cityName": "Teruel",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-01-16T15:38:43.848Z",
+      "notes": "",
+      "position": {
+        "lat": "40.317231732315236",
+        "lng": "-1.1041259765625002"
+      },
+      "id": 73930386
+    },
+    {
+      "cityName": "Budapest",
+      "country": "Hungary",
+      "emoji": "🇭🇺",
+      "date": "2024-01-18T11:28:58.168Z",
+      "notes": "",
+      "position": {
+        "lat": "47.494936505117145",
+        "lng": "19.1436767578125"
+      },
+      "id": 73930387
+    },
+    {
+      "cityName": "Laguna del Marquesado",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-01-18T12:18:53.186Z",
+      "notes": "",
+      "position": {
+        "lat": "40.195659093364654",
+        "lng": "-1.6754150390625002"
+      },
+      "id": 73930388
+    }
+  ]
+}
