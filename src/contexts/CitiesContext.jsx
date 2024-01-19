@@ -9,7 +9,6 @@ import { CITIES_URL } from "../constants";
 import {
   SET_CITIES,
   START_LOADING,
-  FINISH_LOADING,
   SET_CURRENT_CITY,
   REJECTED,
 } from "./actions";
