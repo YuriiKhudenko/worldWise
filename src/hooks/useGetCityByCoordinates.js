@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 
-// "https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=0&longitude=0"
-
 export function convertToEmoji(countryCode) {
   const codePoints = countryCode
     .toUpperCase()

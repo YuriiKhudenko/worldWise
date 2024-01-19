@@ -1,8 +1,9 @@
 import { useNavigate } from "react-router-dom";
+
 import Button from "./Button";
 
 function BackButton() {
-  const navigate = useNavigate(); // former useHistory();
+  const navigate = useNavigate();
 
   return (
     <Button
