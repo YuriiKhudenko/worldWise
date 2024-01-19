@@ -19,6 +19,10 @@ function City() {
   const { id } = useParams();
   const { getCity, currentCity, isLoading } = useCitiesContext();
 
+  // issue with getCity in the dependency array:
+  // we call getCity, which is in the context, getCity updates the state
+  //  which recreates getCity function and as effect subscribed to it useEffect call it again
+  //  = infinite loop; needs to memoize function;
   useEffect(
     function () {
       getCity(id);

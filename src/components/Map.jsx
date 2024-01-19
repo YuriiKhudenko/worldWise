@@ -1,19 +1,21 @@
-import { useNavigate, useSearchParams } from "react-router-dom";
-import styles from "./Map.module.css";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   MapContainer,
   Marker,
   Popup,
   TileLayer,
   useMap,
-  useMapEvent,
   useMapEvents,
 } from "react-leaflet";
-import { useEffect, useState } from "react";
+
 import { useCitiesContext } from "../contexts/CitiesContext";
 import { useGeolocation } from "../hooks/useGeolocation";
-import Button from "./Button";
 import { useUrlPosition } from "../hooks/useUrlPosition";
+
+import Button from "./Button";
+
+import styles from "./Map.module.css";
 
 const HOT_URL = "https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png";
 // const ORIGINAL_URL = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
@@ -27,7 +29,7 @@ const RecenterAutomatically = ({ mapPosition }) => {
 };
 
 const DetectClick = () => {
-  const navigate = useNavigate(); //former useHistory();
+  const navigate = useNavigate();
 
   useMapEvents({
     click: (e) => {
