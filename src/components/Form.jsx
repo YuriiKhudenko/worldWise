@@ -32,7 +32,7 @@ function Form() {
     emoji,
     countryByGeo,
     isCityByGeoLoading,
-    setCityByGeo,
+    setCityNameByGeo,
     isCityByGeoError,
   } = useGetCityByCoordinates(mapLat, mapLng);
   const { addNewCity, isLoading } = useCitiesContext();
@@ -81,7 +81,7 @@ function Form() {
         <label htmlFor="cityName">City name</label>
         <input
           id="cityName"
-          onChange={(e) => setCityByGeo(e.target.value)}
+          onChange={(e) => setCityNameByGeo(e.target.value)}
           value={cityNameByGeo}
         />
         <span className={styles.flag}>{emoji}</span>

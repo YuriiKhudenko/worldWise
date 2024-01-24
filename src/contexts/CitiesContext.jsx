@@ -19,6 +19,7 @@ const initialState = {
   cities: [],
   isLoading: false,
   currentCity: {},
+  error: null,
 };
 
 const reducer = (state = initialState, action) => {
@@ -52,7 +53,7 @@ const reducer = (state = initialState, action) => {
 };
 
 const CitiesProvider = ({ children }) => {
-  const [{ cities, isLoading, currentCity }, dispatch] = useReducer(
+  const [{ cities, isLoading, currentCity, error }, dispatch] = useReducer(
     reducer,
     initialState
   );
@@ -69,7 +70,7 @@ const CitiesProvider = ({ children }) => {
       .then((citiesData) => {
         dispatch({ type: SET_CITIES, payload: citiesData });
       })
-      .catch((error) => alert(error));
+      .catch((error) => dispatch({ type: REJECTED, payload: error }));
   }, []);
 
   const getCity = useCallback(
@@ -144,6 +145,7 @@ const CitiesProvider = ({ children }) => {
         currentCity,
         addNewCity,
         removeCity,
+        error,
       }}
     >
       {children}

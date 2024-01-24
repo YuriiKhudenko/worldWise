@@ -7,7 +7,13 @@ import Message from "./Message";
 import styles from "./CityList.module.css";
 
 function CityList() {
-  const { cities, isLoading } = useCitiesContext();
+  const { cities, isLoading, error } = useCitiesContext();
+
+  if (error) {
+    alert(
+      "Please use github to download and install the project, see readme.md 😉"
+    );
+  }
 
   if (isLoading) {
     return <Spinner />;
